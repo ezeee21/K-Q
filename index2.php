@@ -169,7 +169,7 @@ footer p {
 
 <header>
   <div class="container">
-    <img src="logo.png" alt="Logo de Kings & Queens Association" class="logo">
+    <img src="assets/k&Q.jpg" alt="Logo de Kings & Queens Association" class="logo">
     <nav>
       <div class="menu-icon">&#9776; Menu</div>
       <ul>

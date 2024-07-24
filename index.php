@@ -79,6 +79,27 @@ body {
     cursor: pointer;
   }
 }
+.info{
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display:flex;
+  justify-content:space-between;
+}
+.info img{
+  width: 30vw;
+  align-items:center;
+}
+.info1{
+  width:40%;
+}
+.photo{
+display:flex;
+justify-content:center;
+}
+
 </style>
 </head>
 <body>
@@ -87,7 +108,7 @@ body {
   <div class="menu-icon">&#9776; Menu</div>
     <ul class="nav">
       <div class="logo"> <img src="assets/k&Q.jpg"></div>
-      <ul class="info">
+      <ul class="information">
         <li><a href="#">Projets</a></li>
         <li><a href="#">Événements</a></li>
         <li><a href="#">À propos</a></li>
@@ -100,6 +121,18 @@ body {
       </ul>
     </ul>
 </div>
+
+<section class="presentation">
+  <div class="info">
+    <div class="info1">
+    <h2>Présentation de l'association</h2>
+      <p>Kings & Queens Association est une organisation à but non lucratif dédiée à sensibiliser et éduquer la jeune génération sur les dangers environnementaux actuels. Notre mission est de fournir des connaissances et des outils nécessaires aux jeunes pour comprendre et agir face aux défis environnementaux auxquels notre planète est confrontée.</p>
+    </div>  
+    <div class="photo">
+        <img src="assets/pollution.jpg">
+    </div>
+  </div>
+</section>
 
 <script>  
 document.querySelector('.menu-icon').addEventListener('click', function() {

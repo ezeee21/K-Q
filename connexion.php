@@ -205,8 +205,10 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     font-size: 13px;
     line-height: 1.8;
     color: #222;
-    background-color:#2B5D3E;
     font-weight: 400;
+    background-image:url('assets/accueil.jpg');
+    background-size:cover;
+    background-position: center ;
     font-family: Poppins; }
   
   .container {

@@ -207,7 +207,9 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     font-size: 13px;
     line-height: 1.8;
     color: #222;
-    background-color:#2B5D3E;
+    background-image:url('assets/accueil.jpg');
+    background-size:cover;
+    background-position: center ;
     font-weight: 400;
     font-family: Poppins; }
   
@@ -629,7 +631,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
                         <input type="email" name="mail" id="mail" placeholder="Mail" required> 
                     </div>
                     <div class="form-group"> 
-                        <label for="prenom"><i class="zmdi zmdi-account material-icons-name"></i></label> 
+                        <label for="prenom"><i class="zmdi zmdi-account material-icons-name"></i></label> s
                         <input type="text" name="prenom" id="prenom" placeholder="Prénom" required> 
                     </div>
                     <div class="form-group"> 
@@ -655,7 +657,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
             </div>
             <div class="signup-image"> 
                 <figure><a href='./index.php'><img src="assets/k&Q.jpg" alt="sing up image"></a></figure> 
-                <a href="./login.php" class="signup-image-link">Connexion</a> 
+                <a href="./connexion.php" class="signup-image-link">Connexion</a> 
             </div>
         </div>
     </div>
