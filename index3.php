@@ -209,10 +209,10 @@ button:hover {
         <li><a href="#">Contact</a></li>
         <li><a href="#">Accueil</a></li>
       </ul>
-      <ul class="log">
+      <div class="log">
         <li><a href="inscription.php">Inscription</a></li>
-        <li><a href="login.php">Connexion</a></li>
-      </ul>
+        <li><a href="connexion.php">Connexion</a></li>
+      </div>
     </ul>
 </div>
 </section>
@@ -243,12 +243,12 @@ Nous croyons que l'éducation est la clé pour un avenir durable et que chaque j
       <div class="slider" onmouseover="pauseSlider()" onmouseout="startSlider()">
           <div class="slides">
               <div class="slide">
-                  <img src="assets/karlson.jpg" alt="Karlson">
+                  <img src="assets/Karlson_King.png" alt="Karlson">
                   <h3>KARLSON TABE</h3>
                   <p>Président</p>
               </div>
               <div class="slide">
-                  <img src="https://via.placeholder.com/150" alt="Juliette">
+                  <img src="assets/juliette.webp" alt="Juliette">
                   <h3>JULIETTE CHABRIER</h3>
                   <p>Vice présidente</p>
               </div>
@@ -283,7 +283,7 @@ Nous croyons que l'éducation est la clé pour un avenir durable et que chaque j
                   <p>Secretaire General</p>
               </div>
               <div class="slide">
-                  <img src="assets/Rose Da Fortuna.jpg" alt="rose">
+                  <img src="assets/Rose.png" alt="rose">
                   <h3>ROSE DA FORTUNA</h3>
                   <p>Secretaire</p>
               </div>
@@ -297,7 +297,8 @@ Nous croyons que l'éducation est la clé pour un avenir durable et que chaque j
                   <h3>MOHAMED NGOM</h3>
                   <p>Tresorier en chef</p>
               </div>
-              <div class="slide">
+              
+            <div class="slide">
                   <img src="assets/Maeva mukundi.png" alt="Maeva">
                   <h3>MAEVA MUKUNDI</h3>
                   <p>Tresoriere</p>
@@ -306,6 +307,37 @@ Nous croyons que l'éducation est la clé pour un avenir durable et que chaque j
                   <img src="assets/theo lepage.png" alt="theo">
                   <h3>THEO LEPAGE</h3>
                   <p>Tresorier</p>
+              </div>
+              <!-- /dupliquer pour l'effet looping -->
+              <div class="slide">
+                  <img src="assets/Karlson_King.png" alt="Karlson">
+                  <h3>KARLSON TABE</h3>
+                  <p>Président</p>
+              </div>
+              <div class="slide">
+                  <img src="assets/juliette.webp" alt="Juliette">
+                  <h3>JULIETTE CHABRIER</h3>
+                  <p>Vice présidente</p>
+              </div>
+              <div class="slide">
+                  <img src="assets/mattéo roue-noel.PNG" alt="Matteo">
+                  <h3>MATTEO ROUE-NOËL</h3>
+                  <p>Responsable informatique</p>
+              </div>
+              <div class="slide">
+                  <img src="assets/ilan quenum.png" alt="ilan">
+                  <h3>ILAN QUENUM</h3>
+                  <p>Responsable communication</p>
+              </div>
+              <div class="slide">
+                  <img src="assets/Aby.png" alt="aby">
+                  <h3>ABY <br> BA</h3>
+                  <p>Commerciale</p>
+              </div>
+              <div class="slide">
+                  <img src="assets/marilyse mukundi.PNG" alt="marilyse">
+                  <h3>MARILYSE MUKUNDI</h3>
+                  <p>Redactrice ne chef</p>
               </div>
               
           </div>
