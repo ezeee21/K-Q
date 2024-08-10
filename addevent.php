@@ -3,6 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Initialiser la variable d'événements s'il n'existe pas déjà
+    if (!isset($_SESSION["events"])) {
+        $_SESSION["events"] = [];
+    }
+    
+    // Traiter l'image
+    $imagePath = '';
+    if (isset($_FILES['event_image']) && $_FILES['event_image']['error'] == 0) {
+        $uploadDir = 'uploads/';
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0755, true);
+        }
+        $uploadFile = $uploadDir . basename($_FILES['event_image']['name']);
+        if (move_uploaded_file($_FILES['event_image']['tmp_name'], $uploadFile)) {
+            $imagePath = $uploadFile;
+        }
+    }
+    
+    // Ajouter l'événement à la session
+    $_SESSION["events"][] = [
+        'name' => htmlspecialchars($_POST['event_name']),
+        'description' => htmlspecialchars($_POST['event_description']),
+        'date' => htmlspecialchars($_POST['event_date']),
+        'time' => htmlspecialchars($_POST['event_time']),
+        'image' => $imagePath
+    ];
+    
+    // Rediriger vers la page des événements
+    header('Location: event.php');
+    exit();
+}
+?>
+
 <style>
 
 body {
@@ -298,7 +335,7 @@ textarea {
   <div class="addevent">
   
   </body>
-  <form action="event.php" method="post" enctype="multipart/form-data">
+  <form action="addevent.php" method="post" enctype="multipart/form-data">
   <label for="event_image">Image de l'événement :</label>
   <input type="file" id="event_image" name="event_image" accept="image/*">
   <br>
@@ -344,13 +381,7 @@ function changeSlide() {
   }
 }
 
-function startSlider() {
-  slideInterval = setInterval(changeSlide, 1000); // Adjusted interval to 1 second
-}
 
-function pauseSlider() {
-  clearInterval(slideInterval);
-}
 
 document.addEventListener('DOMContentLoaded', (event) => {
   startSlider();
@@ -359,7 +390,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 function redirectToNewPage() {
             window.location.href = "event.php"; // Remplacez par l'URL de votre nouvelle page
-        }
+        };
 </script>
 </body>
 </html>
