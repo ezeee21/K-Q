@@ -201,6 +201,74 @@ button:hover {
 
     position: top
 }
+
+
+/* emplacement boutton "ajouter" */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button[type="submit"] {
+  margin-top: 420px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* taille des cases du formulaire */
+
+input[type="text"], input[type="date"], input[type="time"] {
+  width: 800px;  /* Largeur souhaitée */
+  height: 100px;  /* Hauteur souhaitée */
+  padding: 10px;
+  font-size: 1rem; /* Taille du texte */
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px; /* Espacement entre les champs */
+}
+
+label {
+  font-size: 1.2rem; /* Taille du texte pour les labels */
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* nombre de caractère dans une case du formulaire + le retour à la ligne en cas de dépassement */ 
+textarea {
+  width: 800px;  /* Largeur souhaitée */
+  height: 100px; /* Hauteur souhaitée */
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  resize: vertical; /* Permet à l'utilisateur de redimensionner verticalement */
+  overflow-y: auto; /* Ajoute une barre de défilement verticale si nécessaire */
+  margin-bottom: 15px;
+}
+
+.event-image {
+  display: block; /* Assure que l'image est sur une nouvelle ligne */
+  max-width: 100%; /* Assure que l'image ne dépasse pas la largeur du conteneur */
+  height: auto; /* Garde les proportions de l'image */
+  margin-bottom: 15px; /* Espacement entre l'image et le formulaire */
+}
+
+
+
+
 </style>
 </head>
 <body>
@@ -230,19 +298,26 @@ button:hover {
   <div class="addevent">
   
   </body>
-  
-  <form action="event.php" method="post">
-        <label for="event_name">Nom de l'événement :</label>
-        <input type="text" id="event_name" name="event_name" required>
-        <br>
-        <label for="event_name">Description de l'événement:</label>
-        <input type="text" id="event_name" name="event_name" required>
-        <br>
-        <label for="event_date">Date de l'événement :</label>
-        <input type="date" id="event_date" name="event_date" required>
-        <br>
-        <button type="submit" a href="event.php">Ajouter</button>
-    </form>
+  <form action="event.php" method="post" enctype="multipart/form-data">
+  <label for="event_image">Image de l'événement :</label>
+  <input type="file" id="event_image" name="event_image" accept="image/*">
+  <br>
+  <label for="event_name">Nom de l'événement :</label>
+  <input type="text" id="event_name" name="event_name" required>
+  <br>
+  <label for="event_description">Description de l'événement :</label>
+  <textarea id="event_description" name="event_description" rows="4" required></textarea>
+  <br>
+  <label for="event_date">Date de l'événement :</label>
+  <input type="date" id="event_date" name="event_date" required>
+  <br>
+  <label for="event_time">Heure de l'événement :</label>
+  <input type="time" id="event_time" name="event_time" required>
+  <br>
+  <button type="submit">Ajouter</button>
+</form>
+
+
   </section>
 </section>
 
