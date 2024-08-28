@@ -1,0 +1,3 @@
+id,id_adherent,montant,date_don,methode_paiement,destination_fonds
+1,2,100,2023-04-20,Carte de crédit,Projet A
+2,1,50,2023-06-15,Virement bancaire,Projet B
