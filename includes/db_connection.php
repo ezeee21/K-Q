@@ -1,6 +1,6 @@
 <?php
 // Database connection
-$host = '192.168.0.33';
+$host = '192.168.1.176';
 $db = 'association'; // Nom de votre base de données
 $user = 'root';   // Nom d'utilisateur MariaDB
 $pass = 'azerty'; // Mot de passe MariaDB

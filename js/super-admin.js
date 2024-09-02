@@ -153,3 +153,30 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add your invite user logic here
     });
 });
+
+function toggleSubMenu(submenuId) {
+    const submenu = document.getElementById(submenuId);
+    const arrow = document.querySelector(`#${submenuId} + span.arrow`);
+
+    if (submenu.style.display === 'block') {
+        submenu.style.display = 'none';
+        arrow.classList.remove('rotate');
+    } else {
+        submenu.style.display = 'block';
+        arrow.classList.add('rotate');
+    }
+}
+
+function showSection(sectionId, liID) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
+    document.getElementById(sectionId).classList.add('active');
+
+    const li = document.querySelectorAll('.activ');
+    li.forEach(lis => {
+        lis.classList.remove('yes');
+    });
+    document.getElementById(liID).classList.add('yes');
+}

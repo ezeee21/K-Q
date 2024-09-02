@@ -4,37 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TPro Admin</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/globall.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div class="sidebar">
-        <div class="sidebar-header">
-            <h2>TPro Admin</h2>
+<div class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-tachometer-alt"></i> TPro Admin</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li id="D" onclick="showSection('Dashboard','D')" class="activ yes">
+                    <i class="fas fa-home"></i> Dashboard
+                </li>
+                <!-- <h2> App </h2> -->
+                <!-- <li id="fin-toggle" class="activ" onclick="toggleSubMenu('fin-submenu')">
+                    <i class="fas fa-wallet"></i> Finances
+                    <span class="arrow">&#9660;</span> Petite flèche vers le bas
+                </li>
+                <ul id="fin-submenu" class="submenu">
+                    <li id="Do" onclick="showSection('Don','Do')" class="activ">
+                        <i class="fas fa-hand-holding-usd"></i> Don
+                    </li>
+                    <li id="DE" onclick="showSection('Depenses','DE')" class="activ">
+                        <i class="fas fa-file-invoice-dollar"></i> Dépenses
+                    </li>
+                    <li id="AD" onclick="showSection('Adherent','AD')" class="activ">
+                        <i class="fas fa-users"></i> Adhérent
+                    </li>
+                </ul> -->
+                <li id="U" onclick="showSection('User','U')" class="activ">
+                    <i class="fas fa-user"></i> User
+                </li>
+                <li id="E" onclick="showSection('Evenement','E')" class="activ">
+                    <i class="fas fa-calendar-alt"></i> Evenement
+                </li> 
+                <li id="AC" onclick="showSection('Article','AC')" class="activ">
+                    <i class="fas fa-newspaper"></i> Article
+                </li> 
+                <li id="C" onclick="showSection('Chat','C')" class="activ">
+                    <i class="fas fa-comments"></i> Chat
+                </li>
+                <!-- <h2>Data List</h2> -->
+                <li id="S" onclick="showSection('Security','S')" class="activ">
+                    <i class="fas fa-shield-alt"></i> Security
+                </li>
+                <li id="A" onclick="showSection('Analytics','A')" class="activ">
+                    <i class="fas fa-chart-line"></i> Analytics
+                </li>
+            </ul>
         </div>
-        <ul class="sidebar-menu">
-            <li id="D" onclick="showSection('Dashboard','D')" class="activ yes">Dashboard</li>
-            <h2> App </h2>
-            <!-- <li id="F" onclick="showSection('Finances','F')" class="activ ">Finances</li>
-            <li id="AD" onclick="showSection('Adherent','AD')" class="activ ">Adherent</li>
-            <li id="DE" onclick="showSection('Depenses','DE')" class="activ ">Depenses</li> -->
-            <li id="U" onclick="showSection('User','U')" class="activ ">User</li>
-            <li id="E" onclick="showSection('Evenement','E')" class="activ ">Evenement</li> 
-            <li id="AC" onclick="showSection('Article','AC')" class="activ ">Artcile</li> 
-            <li id="C" onclick="showSection('Chat','C')" class="activ ">Chat</li>
-            <h2>Data List</h2>
-            <li id="S" onclick="showSection('Security','S')" class="activ ">Security</li>
-            <li id="A" onclick="showSection('Analytics','A')" class="activ ">Analytics</li>
-        </ul>
-    </div>
     <div class="content">
         <div id="Dashboard" class="section active">
                 <div class="header">
                     <div class="profile">
-                        <span>SImonis Stevens </span> <br>
                         <img src="kurosaki_ichigo_by_inferno2446-d4jy0kp.png" alt="Profile">
+                        <span>SImonis Stevens </span><br>
                     </div>
+                    <!-- Bouton Paramètres -->
+                    <button class="settings-button" onclick="location.href='profil.php'">
+                        <i class="fas fa-cog"></i> Paramètres
+                    </button>
                 </div>
                 <div class="stats">
                     <div class="card">
@@ -140,12 +170,16 @@
         </div> -->
 
         <div id="User" class="section">
-            <div class="header">
-                <div class="profile">
-                    <img src="profile.jpg" alt="Profile">
-                    <span>SImonis Stevens </span>
+                <div class="header">
+                    <div class="profile">
+                        <img src="kurosaki_ichigo_by_inferno2446-d4jy0kp.png" alt="Profile">
+                        <span>SImonis Stevens </span><br>
+                    </div>
+                    <!-- Bouton Paramètres -->
+                    <button class="settings-button" onclick="location.href='profil.php'">
+                        <i class="fas fa-cog"></i> Paramètres
+                    </button>
                 </div>
-            </div>
 
             <div id="app">
                 <h1>Gestion des utilisateurs</h1>
@@ -213,11 +247,15 @@
         </div>
         <div id="Evenement" class="section">
                 <div class="header">
-                        <div class="profile">
-                            <img src="profile.jpg" alt="Profile">
-                            <span>SImonis Stevens </span>
-                        </div>
+                    <div class="profile">
+                        <img src="kurosaki_ichigo_by_inferno2446-d4jy0kp.png" alt="Profile">
+                        <span>SImonis Stevens </span><br>
                     </div>
+                    <!-- Bouton Paramètres -->
+                    <button class="settings-button" onclick="location.href='profil.php'">
+                        <i class="fas fa-cog"></i> Paramètres
+                    </button>
+                </div>
 
                     <div id="app">
                             <h1>Gestion des Événements</h1>
@@ -274,11 +312,15 @@
         </div>
         <div id="Article" class="section">
                 <div class="header">
-                        <div class="profile">
-                            <img src="profile.jpg" alt="Profile">
-                            <span>SImonis Stevens </span>
-                        </div>
+                    <div class="profile">
+                        <img src="kurosaki_ichigo_by_inferno2446-d4jy0kp.png" alt="Profile">
+                        <span>SImonis Stevens </span><br>
                     </div>
+                    <!-- Bouton Paramètres -->
+                    <button class="settings-button" onclick="location.href='profil.php'">
+                        <i class="fas fa-cog"></i> Paramètres
+                    </button>
+                </div>
 
                     <div id="app">
                             <h1>Gestion des article</h1>
@@ -339,14 +381,14 @@
                         </div>
 
         </div>
-        <div id="Chat" class="section"></div>
-        <div id="Security" class="section"></div>
-        <div id="Analytics" class="section"></div>   
+        <div id="Chat" class="section"><h2> Pages en cours de préparation </h2> </div>
+        <div id="Security" class="section"> <h2> Pages en cours de préparation </h2> </div>
+        <div id="Analytics" class="section"> <h2> Pages en cours de préparation </h2> </div>   
     </div>
     
     <script src="js/scripts.js"></script>
     <!-- <script src="js/finances.js"></script> -->
-    <script src="js/app1.js"></script>
+    <script src="js/admin.js"></script>
     <script src="js/event.js"></script>
     <script src="js/article.js"></script>
 
